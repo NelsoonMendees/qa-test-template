@@ -1,0 +1,103 @@
+{
+  "Empresa": {
+    "Name": "Empresa Teste QA",
+    "LegalName": "Teste QA - Ploomes",
+    "LineOfBusinessId": 40033640,
+    "OriginId": 40007217,
+    "Register": "33096007000108",
+    "Phones": [
+      {
+        "Type": {
+          "Id": 2,
+          "Name": "Celular"
+        },
+        "TypeId": 2,
+        "PhoneNumber": "(62) 98131-7252",
+        "Country": {
+          "Id": 76,
+          "Short": "BRA",
+          "Short2": "BR",
+          "Name": "BRASIL",
+          "PhoneMask": "(99) 9999?9-9999"
+        },
+        "CountryId": 76
+      }
+    ],
+    "Tags": [],
+    "StreetAddress": "Avenida Vera Cruz",
+    "Neighborhood": "Jardim Guanabara",
+    "ZipCode": 74675830,
+    "CityId": 1926,
+    "State": "GOIÁS",
+    "Country": "BRASIL",
+    "OwnerId": 40003573,
+    "StreetAddressNumber": "",
+    "Latitude": -16.6220958,
+    "Longitude": -49.2161075,
+    "TypeId": 1
+  },
+  "Pessoa": {
+    "Name": "Nelson Mendes",
+    "CompanyId": 400539199,
+    "Phones": [
+      {
+        "Id": 1520767,
+        "ContactId": 400539200,
+        "PhoneNumber": "(62) 98131-7252",
+        "SearchPhoneNumber": 62981317252,
+        "TypeId": 2,
+        "CountryId": 76,
+        "Type": {
+          "Id": 2,
+          "Name": "Celular"
+        },
+        "Country": {
+          "Id": 76,
+          "Short": "BRA",
+          "Short2": "BR",
+          "Name": "BRASIL",
+          "PhoneMask": "(99) 9999?9-9999"
+        }
+      }
+    ],
+    "Email": "nelson_mendes@live.com",
+    "RoleId": 40013586,
+    "DepartmentId": 40009111,
+    "Register": "44230959044",
+    "Birthday": "1991-10-05T00:00-03:00",
+    "OwnerId": 40003573,
+    "TypeId": 2
+  },
+  "PessoaDel": {
+    "Name": "Nelson Neto",
+    "CompanyId": 400539199,
+    "Phones": [
+      {
+        "Id": 1520767,
+        "ContactId": 400539200,
+        "PhoneNumber": "(62) 98131-7252",
+        "SearchPhoneNumber": 62981317252,
+        "TypeId": 2,
+        "CountryId": 76,
+        "Type": {
+          "Id": 2,
+          "Name": "Celular"
+        },
+        "Country": {
+          "Id": 76,
+          "Short": "BRA",
+          "Short2": "BR",
+          "Name": "BRASIL",
+          "PhoneMask": "(99) 9999?9-9999"
+        }
+      }
+    ],
+    "Email": "nelson_mendes@live.com",
+    "RoleId": 40013586,
+    "DepartmentId": 40009111,
+    "Register": "44230959044",
+    "Birthday": "1991-10-05T00:00-03:00",
+    "OwnerId": 40003573,
+    "TypeId": 2
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "validaCampos": [
+    {
+      "input": "Email",
+      "email": "",
+      "senha": "QA@Ploomes",
+      "msg": "Preencha este campo."
+    },
+    {
+      "input": "Senha",
+      "email": "nelson_mendes@live.com",
+      "senha": "",
+      "msg": "Preencha este campo."
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "qa": {
+    "email": "nelson_mendes@live.com",
+    "senha": "QA@Ploomes",
+    "nome": "Conta Teste Nelson Mendes - Não Contatar"
+  },
+  "inv": {
+    "email": "nelson.mendes@qa.com",
+    "senha": "QA_Ploomes"
+  }
+}

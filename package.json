@@ -1,0 +1,16 @@
+{
+  "name": "qa-test-template",
+  "version": "1.0.0",
+  "description": "Teste pratico - Ploomes",
+  "main": "index.js",
+  "repository": "git@github.com:NelsoonMendees/qa-test-template.git",
+  "author": "Nelson Mendes <nelson_mendes@live.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@bahmutov/cy-api": "^2.2.3",
+    "@shelex/cypress-allure-plugin": "^2.34.0",
+    "allure-commandline": "^2.20.1",
+    "cypress": "12.2.0",
+    "cypress-xpath": "^2.0.1"
+  }
+}

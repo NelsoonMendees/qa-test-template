@@ -1,0 +1,27 @@
+{
+  "PrimeiroContato": {
+    "Title": "Test Deals - Stage Primeiro Contato",
+    "Amount": 3000,
+    "StageId": 40008759
+  },
+  "Frio": {
+    "Title": "Test Deals - Stage Frio",
+    "Amount": 3000,
+    "StageId": 40008760
+  },
+  "Morno": {
+    "Title": "Test Deals - Stage Morno",
+    "Amount": 3000,
+    "StageId": 40008761
+  },
+  "Quente": {
+    "Title": "Test Deals - Stage Quente",
+    "Amount": 3000,
+    "StageId": 40008762
+  },
+  "Fechamento": {
+    "Title": "Test Deals - Stage Fechamento",
+    "Amount": 3000,
+    "StageId": 40008763
+  }
+}
