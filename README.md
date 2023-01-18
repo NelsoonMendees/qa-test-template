@@ -5,6 +5,7 @@
 ## Tecnologias
 
 > Framework: Cypress 12.2.0
+
 > Reporter: Allure Report 2.34.0
 
 ## Configurar projeto
