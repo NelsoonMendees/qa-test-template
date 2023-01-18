@@ -5,7 +5,7 @@ module.exports = defineConfig({
   chromeWebSecurity: false,
   scrollBehavior: false,
   defaultCommandTimeout: 10000,
-  pageLoadTimeout: 10000,
+  pageLoadTimeout: 120000,
   video: false,
   screenshotOnRunFailure: true,
   screenshotsFolder: "cypress/results/screenshots",

@@ -1,7 +1,6 @@
 import { selector } from "./selectors";
 
 Cypress.Commands.add("RealizarLogin", (conta) => {
-  cy.intercept('POST', "https://gateway-api2.ploomes.com/Self/Login").as('login')
   cy.visit("/");
   cy.title().should("eq", "Ploomes");
   cy.contains("span", "Login").should("be.visible");
@@ -10,8 +9,6 @@ Cypress.Commands.add("RealizarLogin", (conta) => {
   cy.get(selector.inputSenha).type(conta.senha);
 
   cy.contains("button", "Entrar").should("be.visible").click();
-
-  cy.wait('@login')
 });
 
 Cypress.Commands.add("ValidarConta", (nomeConta) => {

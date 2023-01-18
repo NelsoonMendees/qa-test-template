@@ -16,7 +16,7 @@ describe("CRUD /Contacts", () => {
   context("POST", () => {
     // Removendo Contacts cadastrados para reaproveitamento de massa de testes.
     before(() => {
-      cy.getId().then((response) => {
+      cy.getContactId().then((response) => {
         response.body.value.forEach((value) =>
           cy.removeContact(value.Id).then((res) => {
             expect(res.status).to.eql(200);

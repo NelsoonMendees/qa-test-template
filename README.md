@@ -1,49 +1,59 @@
-# QA Developer Test
+# Testes API / E2E - Ploomes
 
-Parabéns por chegar até esta fase do processo seletivo para Desenvolvedor QA.
+> Projeto de testes automatizados API / E2E - Teste QA Ploomes
 
-Aqui na Ploomes valorizamos muito uma qualidade: autonomia. Isso quer dizer que, uma vez que um problema é apresentado para um dos nossos colaboradores, cabe a este decidir qual a melhor solução.
+## Tecnologias
 
-Por isso,em nosso desafio, nos vamos setar alguns critérios mínimos para a aplicação e deixar você tomar as decisões mais profundas sobre a aplicação, como bibliotecas, estrutura da aplicação e etc.
+> Framework: Cypress 12.2.0
+> Reporter: Allure Report 2.34.0
 
-# Critérios mínimos:
+## Configurar projeto
 
-- Aplicação em JavaScript
-- [Clean Code](https://becode.com.br/clean-code/)
-- Realizar teste na API do Ploomes nas seguintes entidades:
-  - CRUD em Clientes (/Contacts)
-  - CRUD em Negócios (/Deals)
-- Teste no Front-end simulando o uso do sistema semelhante ao realizado pelo usuário final. Devem ser testadas as seguintes funcionalidades:
-  - Login do sistema
-  - CRUD em Clientes
-  - CRUD em Negócios
+> Para gerar reports com Allure Report é necessário ter instalado JAVA 8 ou superior e JAVA_HOME configurado.
 
-# Diferenciais:
+> Terminal recomendado: Git Bash (necessário para executar os comandos de gerar report)
 
-- Teste no Mobile também;
-- Testar mais funcionalidades além das especificadas;
+```bash
+# instalar dependencias
+npm install
+```
 
-# Entrega
+## Executar testes - CLI
 
-- Para a entrega, commitar na branch `main` os testes criados;
-- Incluir também instruções de execução, limitações, bugs conhecidos e quais seriam os próximos passos para a evolução do sistema;
+```bash
+# Allure reporter (local) - Utilizar terminal Git Bash
+npm run cy:allure:report
+# Ao finalizar execução digitar
+npm run allure:open
+```
 
-# Documentação da API do Ploomes:
+```bash
+# Executar sem gerar report
+npx cypress run
+```
 
-Para acessar a api do Ploomes você precisará da chave de integração, que você consegue pegar seguindo a documentação a seguir: https://developers.ploomes.com/
+## Abrir interface do Cypress
 
-# Criação de um conta trial para realização dos testes:
+```bash
+# cypress runner
+npm run cy:open
+```
 
-Você pode criar uma conta trial para realização do teste proposto através do link: https://www.ploomes.com/versao-trial
+## Apagar reports
 
-# Helpers
+```bash
+# apagar arquivos de reports nos diretorios
+npm run allure:clear
+```
 
-[O que é o módulo de clientes?](https://suporte.ploomes.com/pt-BR/articles/5452155-o-que-e-o-modulo-de-clientes)
+## Observações
 
-[Novo módulo de negócios](https://suporte.ploomes.com/pt-BR/articles/5452170-novo-modulo-de-negocios-08-08-19)
+> Ao realizar os testes de API, tanto em POST /Contacts e /Deals foi possivel utilizar o mesmo documento e nome sem validação de cadastro já existente.
 
-[Como criar negócios](https://suporte.ploomes.com/pt-BR/articles/5452169-como-criar-negocios)
+> Front-end possui alguns erros sem tratamento que acarretam em erros na execução via Cypress. O mesmo intercepta todas as requisições realizadas em background no navegador e o teste é encerrado caso ocorra algum erro de uncaught:exception.
 
-[Curso de como utilizar o módulo de clientes](https://universidade.ploomes.com/courses/clientes)
+> Devido a quantidade de requisições realizadas no front a performance é afetada e o processo de login se torna lento.
 
-[Curso de como utilizar o workflow](https://universidade.ploomes.com/courses/workflow)
+> É possivel cadastrar Cliente ou Negocio sem informar qualquer tipo de dado e os campos nome e documento não possuem validação de campo obrigatório. (Como não tenho conhecimento da regra de negocios creio que seja bug)
+
+> Front-End não possui tags de [data-test='input-nome'], [data-id='input-nome'] ou [data-cy='input-nome'] a implementação destas tags ajudam o time de qualidade a indentificar os seletores CSS contribuindo em uma maior assertividade na execução dos testes e facilitando a manutenção do mesmo. O uso destas tags também são uma boa pratica para projetos que possuem testes automatizados.

@@ -4,10 +4,15 @@ import { qa } from "../../fixtures/contaQa.json";
 import { PessoaDel } from "../../fixtures/cadastroContacts.json";
 
 context("Clientes", () => {
+  beforeEach(() => {
+    const conta = qa;
+    cy.RealizarLogin(conta);
+    cy.ValidarConta(conta.nome);
+  });
   describe("Cadastrar", () => {
     // Removendo Contacts cadastrados para reaproveitamento de massa de testes.
     before(() => {
-      cy.getId().then((response) => {
+      cy.getContactId().then((response) => {
         response.body.value.forEach((value) =>
           cy.removeContact(value.Id).then((res) => {
             expect(res.status).to.eql(200);
@@ -16,18 +21,12 @@ context("Clientes", () => {
       });
     });
     it("Cadastrar Cliente", () => {
-      const conta = qa;
-      cy.RealizarLogin(conta);
-      cy.ValidarConta(conta.nome);
       cy.CadastrarCliente(pessoa);
     });
   });
 
   describe("Editar", () => {
     it("Editar Cliente", () => {
-      const conta = qa;
-      cy.RealizarLogin(conta);
-      cy.ValidarConta(conta.nome);
       cy.EditarCliente(pessoa);
     });
   });
@@ -42,9 +41,6 @@ context("Clientes", () => {
     });
     it("Excluir Cliente", () => {
       const nome = Cypress.env("removeContact");
-      const conta = qa;
-      cy.RealizarLogin(conta);
-      cy.ValidarConta(conta.nome);
       cy.ExcluirCliente(nome);
     });
   });

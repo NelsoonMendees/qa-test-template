@@ -6,6 +6,17 @@
   "repository": "git@github.com:NelsoonMendees/qa-test-template.git",
   "author": "Nelson Mendes <nelson_mendes@live.com>",
   "license": "MIT",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run": "cypress run --browser chrome --env allure=true,allureResultsPath=cypress/allure-results,allureAttachRequests=true",
+    "allure:report": "allure generate cypress/allure-results --clean -o cypress/allure-report",
+    "delete:allure:report": "rm -rf cypress/allure-report/* || true",
+    "delete:allure:results": "rm -rf cypress/allure-results/* || true",
+    "allure:clear": "npm run delete:allure:results && npm run delete:allure:report",
+    "pretest": "npm run allure:clear",
+    "cy:allure:report": "npm run pretest && npm run cy:run && npm run allure:report",
+    "allure:open": "allure open cypress/allure-report"
+  },
   "devDependencies": {
     "@bahmutov/cy-api": "^2.2.3",
     "@shelex/cypress-allure-plugin": "^2.34.0",

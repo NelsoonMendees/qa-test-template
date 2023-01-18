@@ -3,7 +3,7 @@ const urlApi = Cypress.env("apiUrl");
 const key = Cypress.env("apiKey");
 
 //#region SetUp - Contacts
-Cypress.Commands.add("getId", () => {
+Cypress.Commands.add("getContactId", () => {
   cy.request({
     method: "GET",
     url: urlApi + "/Contacts",

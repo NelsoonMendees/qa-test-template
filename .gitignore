@@ -4,3 +4,5 @@ cypress/results/*
 node_modules/
 yarn.lock
 temp/
+cypress/allure-report/*
+cypress/allure-results/*
